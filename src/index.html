@@ -112,7 +112,7 @@
         </label>
 
         <label class="form-field">
-          What your favorite color?
+          What is your favorite color?
           <input type="color">
         </label>
 
@@ -120,11 +120,13 @@
           What time do you go to bed?
           <input
             type="time"
+            name="bedTime"
+            step="1"
           >
         </label>
 
         <label class="form-field">
-          What your favorite brand car?
+          What are your favorite brand of cars?
           <select name="cars" multiple>
             <option value="BMW">BMW</option>
             <option value="Audi">Audi</option>
@@ -139,6 +141,7 @@
             id="rate"
             min="0"
             max="100"
+            value="0"
           >
         </label>
       </fieldset>
