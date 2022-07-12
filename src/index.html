@@ -11,7 +11,149 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <h1>HTML Form</h1>
+    <form
+      action="http://localhost:3000/api"
+      method="post"
+    >
+      <fieldset class="Personal information field">
+        <legend>Personal information</legend>
+        <label class="form-field">
+          Surname:
+          <input
+            type="text"
+            name="surname"
+            id="surname-input"
+            autocomplete="off"
+            minlength="2"
+            maxlength="20"
+          >
+        </label>
+        <label class="form-field">
+          Name:
+          <input
+            type="text"
+            name="name"
+            id="name-input"
+            autocomplete="off"
+            minlength="2"
+            maxlength="20"
+          >
+        </label>
+
+        <label class="form-field">
+          How old are you?
+          <input type="number" required
+            min="1"
+            max="100"
+            value="12"
+          >
+        </label>
+
+        <label class="form-field">
+          Full date of birth:
+          <input
+            type="date"
+            name="birth"
+            id="birth-input"
+            placeholder="mm/dd/yyyy"
+            autocomplete="off"
+          >
+        </label>
+        <label class="form-field">
+          I accept the term of the agreement:
+          <input
+            type="checkbox"
+            name="remember"
+            id="term-input"
+          >
+        </label>
+      </fieldset>
+      <fieldset class="Registration field">
+        <legend>Registration</legend>
+        <label class="form-field">
+          E-mail:
+          <input
+            type="email"
+            name="e-mail-input"
+            placeholder="email@example.com"
+          >
+        </label>
+        <label class="form-field">
+          Password:
+          <input
+            type="password"
+            name="password-input"
+            minlength="10"
+            maxlength="20"
+          >
+        </label>
+      </fieldset>
+      <fieldset class="interesting-fact field">
+        <legend>An interesting fact about you!</legend>
+        <label class="form-field">
+          Do you love cats?
+          <input
+            type="radio"
+            name="cats"
+            value="y"
+          >
+          Yes
+
+          <input
+            type="radio"
+            name="cats"
+            value="n">
+          No
+        </label>
+
+        <label class="form-field">
+          What your favorite color?
+          <input type="color">
+        </label>
+
+        <label class="form-field">
+          What time do you go to bed?
+          <input
+            type="time"
+          >
+        </label>
+
+        <label class="form-field">
+          What your favorite brand car?
+          <select name="cars" multiple>
+            <option value="BMW">BMW</option>
+            <option value="Audi">Audi</option>
+            <option value="Lada">Lada</option>
+          </select>
+        </label>
+
+        <label class="form-field">
+          How do you rate our work?
+          <input
+            type="range"
+            id="rate"
+            min="0"
+            max="100"
+          >
+        </label>
+      </fieldset>
+      <fieldset class="additional-info field">
+        <legend>Additional info:</legend>
+        <label class="form-field">
+          Comments:
+          <textarea name="comments"></textarea>
+        </label>
+
+        <label class="form-field">
+          Would you recommend us?
+          <select name="recomend" id="recomend">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+          </select>
+        </label>
+      </fieldset>
+      <button type="submit">Submit</button>
+    </form>
     <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>
